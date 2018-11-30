@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var array = [2, -3, 4, 1, -6, -4, 1],
+                n = 2;
+
+
+            CreateChunk(array, n);
+
+
+
+        });
+
+        function CreateChunk(array, n) {
+
+            var chunkArray = [];
+
+            for (var element of array) {
+
+                var lastElement = chunkArray[chunkArray.length - 1];
+
+               
+                if (!lastElement || lastElement.length == n)
+                    chunkArray.push([element]);
+                else
+                    lastElement.push(element);
+            }
+
+            Console.log("Final result: " + chunkArray);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

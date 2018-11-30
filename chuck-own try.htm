@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var array = [2, -3, 4, 1, -6, -4, 1],
+                n = 2;
+
+
+            CreateChunk(array, n);
+
+
+
+        });
+
+        function CreateChunk(array, n) {
+
+            var result = [],
+                temp = [];
+
+
+            for (let value of array) {
+
+                let a = 100;
+                if (temp.length == n || (array.indexOf(value) == array.length - 1)) {
+                    result.push(temp);
+                    temp = [];
+                }
+
+                temp.push(value);
+
+            }
+
+            console.log("a: " + a);
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

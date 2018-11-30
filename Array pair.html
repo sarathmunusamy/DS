@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var array  = [2,-3,4,1,-6,-4,1],
+                n = 18;
+
+            array = array.sort(function (a, b) { return a - b });
+
+            findpair(array, n);
+
+
+
+        });
+
+
+        function findpair(array, n) {
+
+            var i = 0; j = 1, length = array.length;
+
+
+            while (i < length && j < length) {
+
+                if (array[i] != array[j]) {
+                    if (array[i] - array[j] < 0)
+                        i++;
+                    else if (array[i] - array[j] > 0)
+                        j++;
+                    else
+                        console.log("i: " + i + " j:" + j);
+                }
+
+
+                console.log("no pair");
+
+
+
+                // while (i < length && j < length) { // if ((array[i] !==a rray[j]) && (array[j] - array[i]==n )) { // console.log(
+                //   "i: " +array[i] + "  j:" + array[j]) // return; // } // else if (array[j] - array[i] < n) // j++; // else // i++ // }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

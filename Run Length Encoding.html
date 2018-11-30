@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var word = "geeksforgeeks";
+            var resultObj = {};
+
+
+            for (var character of word) {
+
+                if (resultObj[character])
+                    resultObj[character] = resultObj[character] + 1;
+                else
+                    resultObj[character] = 1;
+
+            }
+
+            var finalresult = '';
+
+            for (var character of word) {
+
+                if (resultObj[character] > 1)
+                    finalresult = finalresult + resultObj[character] + character;
+                else
+                    finalresult = finalresult + character;
+            }
+
+            console.log("finalresult: " + finalresult);
+
+
+            draw();
+            
+
+            function draw() {
+
+
+                var a = 10;
+                if (a == 10) {
+                    let b = 10;
+                    console.log(b);
+                }
+                console.log(b);
+
+
+
+
+            }
+
+
+            function redraw() {
+
+
+
+                console.log(a)
+
+
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
